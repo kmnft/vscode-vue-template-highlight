@@ -1,0 +1,20 @@
+{
+	"scopeName": "vue-inline-template.injection",
+	"injectionSelector": "L:meta.objectliteral.js",
+	"patterns": [
+		{ "include": "#template" }
+	],
+	"repository": {
+		"template": {
+			"begin": 
+				"(template)(:)(\\s*)(`)",
+			"end": 
+				"(`)",
+			"contentName": 
+				"meta.embedded.block.vue.template",
+			"patterns":[
+				{ "include": "text.html.vue-html" }
+			]
+		}
+	}
+}

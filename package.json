@@ -1,0 +1,40 @@
+{
+    "name": "vue-inline-template-syntax-highlight",
+    "displayName": "Vue-HTML Embedded Syntax Highlight",
+    "description": "Highlight template-strings as vue-html language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+      "languages": [
+        {
+          "id": "vue-html",
+          "configuration": "./languages/vue-html-language-configuration.json"
+        }
+      ],
+      "grammars": [
+        {
+          "path": "./syntaxes/injection.json",
+          "scopeName": "vue-inline-template.injection",
+          "injectTo": [
+            "source.js"
+          ],
+          "embeddedLanguages": {
+            "meta.embedded.block.vue.template": "vue-html"
+          }
+        },
+        {
+          "language": "vue-html",
+          "scopeName": "text.html.vue-html",
+          "path": "./syntaxes/vue-html.tmLanguage.json",
+          "embeddedLanguages": {
+            "source.js": "javascript"
+          }
+        }
+      ]
+    }
+}
